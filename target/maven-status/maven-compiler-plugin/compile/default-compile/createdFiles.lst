@@ -1,0 +1,15 @@
+com\ari\postres\service\PostresService$1.class
+com\ari\postres\service\IUsuarioService.class
+com\ari\postres\service\PostresService.class
+com\ari\postres\JakartaRestConfiguration.class
+com\ari\postres\service\UsuarioService.class
+com\ari\postres\model\Usuario.class
+com\ari\postres\config\ApiConfig.class
+com\ari\postres\service\ITipoPostre.class
+com\ari\postres\dao\UsuarioDAO.class
+com\ari\postres\model\TipoPostre.class
+com\ari\postres\resources\JakartaEE11Resource.class
+com\ari\postres\controller\PostreServlet.class
+com\ari\postres\service\TipoPostreService.class
+com\ari\postres\service\IPostresService.class
+com\ari\postres\model\Postre.class
