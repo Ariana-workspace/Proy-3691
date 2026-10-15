@@ -4,6 +4,8 @@
  */
 package com.ari.postres.model;
 
+import java.util.Objects;
+
 /**
  *
  * @author LMA002-11
@@ -73,6 +75,48 @@ public class Usuario {
 
     public void setId_rol(int id_rol) {
         this.id_rol = id_rol;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 89 * hash + this.id_usuario;
+        hash = 89 * hash + Objects.hashCode(this.nombre);
+        hash = 89 * hash + Objects.hashCode(this.email);
+        hash = 89 * hash + Objects.hashCode(this.password);
+        hash = 89 * hash + Objects.hashCode(this.telefono);
+        hash = 89 * hash + this.id_rol;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Usuario other = (Usuario) obj;
+        if (this.id_usuario != other.id_usuario) {
+            return false;
+        }
+        if (this.id_rol != other.id_rol) {
+            return false;
+        }
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        if (!Objects.equals(this.email, other.email)) {
+            return false;
+        }
+        if (!Objects.equals(this.password, other.password)) {
+            return false;
+        }
+        return Objects.equals(this.telefono, other.telefono);
     }
     
     

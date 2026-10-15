@@ -4,6 +4,8 @@
  */
 package com.ari.postres.model;
 
+import java.util.Objects;
+
 /**
  *
  * @author LMA002-11
@@ -114,6 +116,64 @@ public class Postre {
 
     public void setCalorias(int calorias) {
         this.calorias = calorias;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 41 * hash + this.id_postre;
+        hash = 41 * hash + Objects.hashCode(this.nom_postre);
+        hash = 41 * hash + this.id_tipo;
+        hash = 41 * hash + Objects.hashCode(this.receta);
+        hash = 41 * hash + Objects.hashCode(this.precio);
+        hash = 41 * hash + this.disponible;
+        hash = 41 * hash + this.stock;
+        hash = 41 * hash + Objects.hashCode(this.imagen);
+        hash = 41 * hash + Objects.hashCode(this.descripcion);
+        hash = 41 * hash + this.calorias;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Postre other = (Postre) obj;
+        if (this.id_postre != other.id_postre) {
+            return false;
+        }
+        if (this.id_tipo != other.id_tipo) {
+            return false;
+        }
+        if (this.disponible != other.disponible) {
+            return false;
+        }
+        if (this.stock != other.stock) {
+            return false;
+        }
+        if (this.calorias != other.calorias) {
+            return false;
+        }
+        if (!Objects.equals(this.nom_postre, other.nom_postre)) {
+            return false;
+        }
+        if (!Objects.equals(this.receta, other.receta)) {
+            return false;
+        }
+        if (!Objects.equals(this.imagen, other.imagen)) {
+            return false;
+        }
+        if (!Objects.equals(this.descripcion, other.descripcion)) {
+            return false;
+        }
+        return Objects.equals(this.precio, other.precio);
     }
     
     
