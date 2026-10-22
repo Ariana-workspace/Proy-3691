@@ -38,7 +38,7 @@ public class PostresService implements IPostresService{
             Type tipoDlista= new TypeToken<List<Postre>>() {}.getType();
             List<Postre> lista = new Gson().fromJson(response.body(), tipoDlista);
 
-System.out.println("Cantidad de postres: " + lista.size());
+        System.out.println("Cantidad de postres: " + lista.size());
 
 if (!lista.isEmpty()) {
     System.out.println("Primer postre: " + lista.get(0).getNom_postre());
@@ -69,5 +69,10 @@ if (!lista.isEmpty()) {
     @Override
     public void eliminarPostre(Integer id_postre) {
 
+    }
+
+    @Override
+    public Postre buscarPostre(Integer id_postre) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

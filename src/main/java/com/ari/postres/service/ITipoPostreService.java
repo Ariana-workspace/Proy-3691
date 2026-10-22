@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author LMA002-11
  */
-public interface ITipoPostre {
+public interface ITipoPostreService {
     public List<TipoPostre> listarTiposDePostre();
     public TipoPostre buscarTipoPostre(Integer id_tipo);
 }

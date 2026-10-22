@@ -14,6 +14,7 @@ import java.util.List;
 public interface IPostresService {
     
     public List<Postre> listarPostres();
+    public Postre buscarPostre(Integer id_postre);
     public Postre agregarPostre(Postre postre);
     public Postre editarPostre(Postre postre);
     public void eliminarPostre(Integer id_postre);

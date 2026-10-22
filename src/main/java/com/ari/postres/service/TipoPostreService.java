@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author LMA002-11
  */
-public class TipoPostreService implements ITipoPostre{
+public class TipoPostreService implements ITipoPostreService{
 
     @Override
     public List<TipoPostre> listarTiposDePostre() {
